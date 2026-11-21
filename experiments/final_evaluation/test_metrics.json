@@ -1,0 +1,207 @@
+{
+  "test_dataset_metadata": {
+    "total_records": 6782,
+    "negative_count": 5989,
+    "positive_count": 793,
+    "negative_pct": 88.31,
+    "positive_pct": 11.69,
+    "num_features": 51
+  },
+  "models": [
+    {
+      "model_name": "Logistic Regression",
+      "threshold_independent_metrics": {
+        "roc_auc": 0.7682,
+        "pr_auc": 0.4147
+      },
+      "default_threshold_metrics": {
+        "threshold": 0.5,
+        "accuracy": 0.7561,
+        "precision": 0.2672,
+        "recall": 0.623,
+        "f1": 0.374,
+        "confusion_matrix": {
+          "tn": 4634,
+          "fp": 1355,
+          "fn": 299,
+          "tp": 494
+        }
+      },
+      "tuned_threshold_metrics": {
+        "threshold": 0.66,
+        "accuracy": 0.8761,
+        "precision": 0.4661,
+        "recall": 0.4073,
+        "f1": 0.4347,
+        "confusion_matrix": {
+          "tn": 5619,
+          "fp": 370,
+          "fn": 470,
+          "tp": 323
+        }
+      },
+      "generalization_comparison": {
+        "roc_auc": {
+          "val": 0.772,
+          "test": 0.7682,
+          "delta": -0.0038
+        },
+        "pr_auc": {
+          "val": 0.4162,
+          "test": 0.4147,
+          "delta": -0.0015
+        },
+        "f1_default": {
+          "val": 0.3778,
+          "test": 0.374,
+          "delta": -0.0038
+        },
+        "f1_tuned": {
+          "val": 0.449,
+          "test": 0.4347,
+          "delta": -0.0143
+        },
+        "precision_tuned": {
+          "val": 0.4767,
+          "test": 0.4661,
+          "delta": -0.0106
+        },
+        "recall_tuned": {
+          "val": 0.4244,
+          "test": 0.4073,
+          "delta": -0.0171
+        }
+      }
+    },
+    {
+      "model_name": "Random Forest",
+      "threshold_independent_metrics": {
+        "roc_auc": 0.7914,
+        "pr_auc": 0.4512
+      },
+      "default_threshold_metrics": {
+        "threshold": 0.5,
+        "accuracy": 0.8154,
+        "precision": 0.3416,
+        "recall": 0.6242,
+        "f1": 0.4416,
+        "confusion_matrix": {
+          "tn": 5035,
+          "fp": 954,
+          "fn": 298,
+          "tp": 495
+        }
+      },
+      "tuned_threshold_metrics": {
+        "threshold": 0.635,
+        "accuracy": 0.877,
+        "precision": 0.4741,
+        "recall": 0.4741,
+        "f1": 0.4741,
+        "confusion_matrix": {
+          "tn": 5572,
+          "fp": 417,
+          "fn": 417,
+          "tp": 376
+        }
+      },
+      "generalization_comparison": {
+        "roc_auc": {
+          "val": 0.7977,
+          "test": 0.7914,
+          "delta": -0.0063
+        },
+        "pr_auc": {
+          "val": 0.4621,
+          "test": 0.4512,
+          "delta": -0.0109
+        },
+        "f1_default": {
+          "val": 0.4435,
+          "test": 0.4416,
+          "delta": -0.0019
+        },
+        "f1_tuned": {
+          "val": 0.4849,
+          "test": 0.4741,
+          "delta": -0.0108
+        },
+        "precision_tuned": {
+          "val": 0.4849,
+          "test": 0.4741,
+          "delta": -0.0108
+        },
+        "recall_tuned": {
+          "val": 0.4849,
+          "test": 0.4741,
+          "delta": -0.0108
+        }
+      }
+    },
+    {
+      "model_name": "PyTorch Neural Network",
+      "threshold_independent_metrics": {
+        "roc_auc": 0.7856,
+        "pr_auc": 0.4311
+      },
+      "default_threshold_metrics": {
+        "threshold": 0.5,
+        "accuracy": 0.7974,
+        "precision": 0.3163,
+        "recall": 0.6305,
+        "f1": 0.4212,
+        "confusion_matrix": {
+          "tn": 4908,
+          "fp": 1081,
+          "fn": 293,
+          "tp": 500
+        }
+      },
+      "tuned_threshold_metrics": {
+        "threshold": 0.685,
+        "accuracy": 0.8756,
+        "precision": 0.4692,
+        "recall": 0.4905,
+        "f1": 0.4797,
+        "confusion_matrix": {
+          "tn": 5549,
+          "fp": 440,
+          "fn": 404,
+          "tp": 389
+        }
+      },
+      "generalization_comparison": {
+        "roc_auc": {
+          "val": 0.7996,
+          "test": 0.7856,
+          "delta": -0.014
+        },
+        "pr_auc": {
+          "val": 0.4455,
+          "test": 0.4311,
+          "delta": -0.0144
+        },
+        "f1_default": {
+          "val": 0.4199,
+          "test": 0.4212,
+          "delta": 0.0013
+        },
+        "f1_tuned": {
+          "val": 0.4887,
+          "test": 0.4797,
+          "delta": -0.009
+        },
+        "precision_tuned": {
+          "val": 0.4734,
+          "test": 0.4692,
+          "delta": -0.0042
+        },
+        "recall_tuned": {
+          "val": 0.505,
+          "test": 0.4905,
+          "delta": -0.0145
+        }
+      }
+    }
+  ]
+}

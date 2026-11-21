@@ -1,0 +1,91 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# MLflow tracking and artifacts
+mlruns/
+mlartifacts/
+.mlflow/
+mlruns.db
+*.db
+*.sqlite
+*.sqlite3
+
+# Data directories (keep directory structure with .gitkeep, ignore data files)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Saved Models & Weights
+models/*
+!models/.gitkeep
+*.pt
+*.pth
+*.onnx
+*.pkl
+*.joblib
+*.h5
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+.coverage*
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+
+# Temporary and scratch files
+*.tmp
+*.temp
+*.bak
+*.log
+scratch/
+
+# IDE & Editor configuration
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# OS generated files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,250 @@
+{
+  "dataset_name": "UCI Bank Marketing",
+  "dataset_id": 222,
+  "rows": 45211,
+  "columns": 17,
+  "target_distribution": {
+    "target_column": "y",
+    "classes": [
+      "yes",
+      "no"
+    ],
+    "counts": {
+      "no": 39922,
+      "yes": 5289
+    },
+    "percentages": {
+      "no": 88.3,
+      "yes": 11.7
+    },
+    "imbalance_ratio": "7.55:1 (no:yes)",
+    "minority_class_percentage": 11.7
+  },
+  "numerical_summary": {
+    "age": {
+      "count": 45211,
+      "mean": 40.94,
+      "std": 10.62,
+      "min": 18.0,
+      "q25": 33.0,
+      "median": 39.0,
+      "q75": 48.0,
+      "max": 95.0,
+      "skewness": 0.68,
+      "iqr": 15.0,
+      "outliers_count": 487,
+      "outliers_pct": 1.08
+    },
+    "balance": {
+      "count": 45211,
+      "mean": 1362.27,
+      "std": 3044.77,
+      "min": -8019.0,
+      "q25": 72.0,
+      "median": 448.0,
+      "q75": 1428.0,
+      "max": 102127.0,
+      "skewness": 8.36,
+      "iqr": 1356.0,
+      "outliers_count": 4729,
+      "outliers_pct": 10.46
+    },
+    "day": {
+      "count": 45211,
+      "mean": 15.81,
+      "std": 8.32,
+      "min": 1.0,
+      "q25": 8.0,
+      "median": 16.0,
+      "q75": 21.0,
+      "max": 31.0,
+      "skewness": 0.09,
+      "iqr": 13.0,
+      "outliers_count": 0,
+      "outliers_pct": 0.0
+    },
+    "duration": {
+      "count": 45211,
+      "mean": 258.16,
+      "std": 257.53,
+      "min": 0.0,
+      "q25": 103.0,
+      "median": 180.0,
+      "q75": 319.0,
+      "max": 4918.0,
+      "skewness": 3.14,
+      "iqr": 216.0,
+      "outliers_count": 3235,
+      "outliers_pct": 7.16
+    },
+    "campaign": {
+      "count": 45211,
+      "mean": 2.76,
+      "std": 3.1,
+      "min": 1.0,
+      "q25": 1.0,
+      "median": 2.0,
+      "q75": 3.0,
+      "max": 63.0,
+      "skewness": 4.9,
+      "iqr": 2.0,
+      "outliers_count": 3064,
+      "outliers_pct": 6.78
+    },
+    "pdays": {
+      "count": 45211,
+      "mean": 40.2,
+      "std": 100.13,
+      "min": -1.0,
+      "q25": -1.0,
+      "median": -1.0,
+      "q75": -1.0,
+      "max": 871.0,
+      "skewness": 2.62,
+      "iqr": 0.0,
+      "outliers_count": 8257,
+      "outliers_pct": 18.26
+    },
+    "previous": {
+      "count": 45211,
+      "mean": 0.58,
+      "std": 2.3,
+      "min": 0.0,
+      "q25": 0.0,
+      "median": 0.0,
+      "q75": 0.0,
+      "max": 275.0,
+      "skewness": 41.85,
+      "iqr": 0.0,
+      "outliers_count": 8257,
+      "outliers_pct": 18.26
+    }
+  },
+  "categorical_summary": {
+    "job": {
+      "unique_cardinality": 12,
+      "top_category": "blue-collar",
+      "top_category_count": 9732,
+      "unknown_count": 288,
+      "unknown_pct": 0.64,
+      "percentages": {
+        "blue-collar": 21.53,
+        "management": 20.92,
+        "technician": 16.8,
+        "admin.": 11.44,
+        "services": 9.19,
+        "retired": 5.01,
+        "self-employed": 3.49,
+        "entrepreneur": 3.29,
+        "unemployed": 2.88,
+        "housemaid": 2.74,
+        "student": 2.07,
+        "unknown": 0.64
+      }
+    },
+    "marital": {
+      "unique_cardinality": 3,
+      "top_category": "married",
+      "top_category_count": 27214,
+      "unknown_count": 0,
+      "unknown_pct": 0.0,
+      "percentages": {
+        "married": 60.19,
+        "single": 28.29,
+        "divorced": 11.52
+      }
+    },
+    "education": {
+      "unique_cardinality": 4,
+      "top_category": "secondary",
+      "top_category_count": 23202,
+      "unknown_count": 1857,
+      "unknown_pct": 4.11,
+      "percentages": {
+        "secondary": 51.32,
+        "tertiary": 29.42,
+        "primary": 15.15,
+        "unknown": 4.11
+      }
+    },
+    "default": {
+      "unique_cardinality": 2,
+      "top_category": "no",
+      "top_category_count": 44396,
+      "unknown_count": 0,
+      "unknown_pct": 0.0,
+      "percentages": {
+        "no": 98.2,
+        "yes": 1.8
+      }
+    },
+    "housing": {
+      "unique_cardinality": 2,
+      "top_category": "yes",
+      "top_category_count": 25130,
+      "unknown_count": 0,
+      "unknown_pct": 0.0,
+      "percentages": {
+        "yes": 55.58,
+        "no": 44.42
+      }
+    },
+    "loan": {
+      "unique_cardinality": 2,
+      "top_category": "no",
+      "top_category_count": 37967,
+      "unknown_count": 0,
+      "unknown_pct": 0.0,
+      "percentages": {
+        "no": 83.98,
+        "yes": 16.02
+      }
+    },
+    "contact": {
+      "unique_cardinality": 3,
+      "top_category": "cellular",
+      "top_category_count": 29285,
+      "unknown_count": 13020,
+      "unknown_pct": 28.8,
+      "percentages": {
+        "cellular": 64.77,
+        "unknown": 28.8,
+        "telephone": 6.43
+      }
+    },
+    "month": {
+      "unique_cardinality": 12,
+      "top_category": "may",
+      "top_category_count": 13766,
+      "unknown_count": 0,
+      "unknown_pct": 0.0,
+      "percentages": {
+        "may": 30.45,
+        "jul": 15.25,
+        "aug": 13.82,
+        "jun": 11.81,
+        "nov": 8.78,
+        "apr": 6.49,
+        "feb": 5.86,
+        "jan": 3.1,
+        "oct": 1.63,
+        "sep": 1.28,
+        "mar": 1.06,
+        "dec": 0.47
+      }
+    },
+    "poutcome": {
+      "unique_cardinality": 4,
+      "top_category": "unknown",
+      "top_category_count": 36959,
+      "unknown_count": 36959,
+      "unknown_pct": 81.75,
+      "percentages": {
+        "unknown": 81.75,
+        "failure": 10.84,
+        "other": 4.07,
+        "success": 3.34
+      }
+    }
+  }
+}

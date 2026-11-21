@@ -1,0 +1,125 @@
+[
+  {
+    "model_name": "Logistic Regression",
+    "train_time_sec": 0.4455,
+    "latency": {
+      "num_repeats": 10,
+      "batch_size": 6782,
+      "median_batch_latency_ms": 1.765,
+      "per_sample_latency_ms": 0.00026,
+      "per_sample_latency_us": 0.26
+    },
+    "threshold_independent_metrics": {
+      "roc_auc": 0.772,
+      "pr_auc": 0.4162
+    },
+    "default_threshold_metrics": {
+      "threshold": 0.5,
+      "accuracy": 0.7572,
+      "precision": 0.2698,
+      "recall": 0.6297,
+      "f1": 0.3778,
+      "confusion_matrix": {
+        "tn": 4635,
+        "fp": 1353,
+        "fn": 294,
+        "tp": 500
+      }
+    },
+    "tuned_threshold_metrics": {
+      "threshold": 0.66,
+      "accuracy": 0.8781,
+      "precision": 0.4767,
+      "recall": 0.4244,
+      "f1": 0.449,
+      "confusion_matrix": {
+        "tn": 5618,
+        "fp": 370,
+        "fn": 457,
+        "tp": 337
+      }
+    }
+  },
+  {
+    "model_name": "Random Forest",
+    "train_time_sec": 1.1659,
+    "latency": {
+      "num_repeats": 10,
+      "batch_size": 6782,
+      "median_batch_latency_ms": 65.377,
+      "per_sample_latency_ms": 0.00964,
+      "per_sample_latency_us": 9.64
+    },
+    "threshold_independent_metrics": {
+      "roc_auc": 0.7977,
+      "pr_auc": 0.4621
+    },
+    "default_threshold_metrics": {
+      "threshold": 0.5,
+      "accuracy": 0.8127,
+      "precision": 0.3401,
+      "recall": 0.6373,
+      "f1": 0.4435,
+      "confusion_matrix": {
+        "tn": 5006,
+        "fp": 982,
+        "fn": 288,
+        "tp": 506
+      }
+    },
+    "tuned_threshold_metrics": {
+      "threshold": 0.635,
+      "accuracy": 0.8794,
+      "precision": 0.4849,
+      "recall": 0.4849,
+      "f1": 0.4849,
+      "confusion_matrix": {
+        "tn": 5579,
+        "fp": 409,
+        "fn": 409,
+        "tp": 385
+      }
+    }
+  },
+  {
+    "model_name": "PyTorch Neural Network",
+    "train_time_sec": 20.8682,
+    "latency": {
+      "num_repeats": 10,
+      "batch_size": 6782,
+      "median_batch_latency_ms": 3.874,
+      "per_sample_latency_ms": 0.00057,
+      "per_sample_latency_us": 0.57
+    },
+    "threshold_independent_metrics": {
+      "roc_auc": 0.7996,
+      "pr_auc": 0.4455
+    },
+    "default_threshold_metrics": {
+      "threshold": 0.5,
+      "accuracy": 0.7902,
+      "precision": 0.3104,
+      "recall": 0.6486,
+      "f1": 0.4199,
+      "confusion_matrix": {
+        "tn": 4844,
+        "fp": 1144,
+        "fn": 279,
+        "tp": 515
+      }
+    },
+    "tuned_threshold_metrics": {
+      "threshold": 0.685,
+      "accuracy": 0.8763,
+      "precision": 0.4734,
+      "recall": 0.505,
+      "f1": 0.4887,
+      "confusion_matrix": {
+        "tn": 5542,
+        "fp": 446,
+        "fn": 393,
+        "tp": 401
+      }
+    }
+  }
+]

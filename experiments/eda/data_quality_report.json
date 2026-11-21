@@ -1,0 +1,79 @@
+{
+  "is_valid": true,
+  "total_rows": 45211,
+  "total_cols": 17,
+  "missing_columns": [],
+  "unexpected_columns": [],
+  "type_mismatches": {},
+  "standard_missing_values": {
+    "age": 0,
+    "job": 0,
+    "marital": 0,
+    "education": 0,
+    "default": 0,
+    "balance": 0,
+    "housing": 0,
+    "loan": 0,
+    "contact": 0,
+    "day": 0,
+    "month": 0,
+    "duration": 0,
+    "campaign": 0,
+    "pdays": 0,
+    "previous": 0,
+    "poutcome": 0,
+    "y": 0
+  },
+  "categorical_placeholders": {
+    "job": {
+      "count": 288,
+      "percentage": 0.64,
+      "note": "Categorical placeholder 'unknown' present in 0.64% of records."
+    },
+    "education": {
+      "count": 1857,
+      "percentage": 4.11,
+      "note": "Categorical placeholder 'unknown' present in 4.11% of records."
+    },
+    "contact": {
+      "count": 13020,
+      "percentage": 28.8,
+      "note": "Categorical placeholder 'unknown' present in 28.8% of records."
+    },
+    "poutcome": {
+      "count": 36959,
+      "percentage": 81.75,
+      "note": "Categorical placeholder 'unknown' present in 81.75% of records."
+    }
+  },
+  "sentinel_values": {
+    "pdays_-1": {
+      "count": 36954,
+      "percentage": 81.74,
+      "meaning": "Client was not previously contacted during any prior campaign."
+    }
+  },
+  "duplicate_rows_count": 0,
+  "duplicate_rows_pct": 0.0,
+  "domain_anomalies": [],
+  "target_summary": {
+    "target_column": "y",
+    "classes": [
+      "yes",
+      "no"
+    ],
+    "counts": {
+      "no": 39922,
+      "yes": 5289
+    },
+    "percentages": {
+      "no": 88.3,
+      "yes": 11.7
+    },
+    "imbalance_ratio": "7.55:1 (no:yes)",
+    "minority_class_percentage": 11.7
+  },
+  "leakage_warnings": [
+    "LEAKAGE WARNING: Feature 'duration' represents call duration in seconds. This attribute is unknown before a call is performed (the prospective prediction scenario) and strongly correlates with the target 'y'. As per UCI guidelines and best ML practices, 'duration' must be strictly excluded from prospective pre-call feature sets."
+  ]
+}
