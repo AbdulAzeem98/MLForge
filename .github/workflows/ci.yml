@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Test on Ubuntu (Python 3.11, CPU)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          version: "0.13.1"
+          enable-cache: true
+          cache-dependency-glob: "requirements.lock"
+
+      - name: Set up virtual environment
+        run: |
+          uv venv .venv --python 3.11
+          echo "$GITHUB_WORKSPACE/.venv/bin" >> $GITHUB_PATH
+          echo "VIRTUAL_ENV=$GITHUB_WORKSPACE/.venv" >> $GITHUB_ENV
+
+      - name: Install dependencies from lockfile
+        run: uv pip install --python .venv/bin/python -r requirements.lock
+
+      - name: Check dependency consistency
+        run: uv pip check --python .venv/bin/python
+
+      - name: Run environment verification
+        run: python check_environment.py
+
+      - name: Run test suite with coverage
+        run: python -m pytest --cov=src --cov-report=term-missing
