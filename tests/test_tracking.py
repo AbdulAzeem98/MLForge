@@ -1,6 +1,7 @@
 """Automated test suite for MLflow tracking, parameter/metric integrity, artifact download, and governance."""
 
 import ast
+import json
 from pathlib import Path
 import joblib
 import pytest
@@ -34,16 +35,31 @@ def mlflow_setup(tmp_path_factory):
     (tmp_dir / "data/processed").mkdir(parents=True)
     (tmp_dir / "data/raw").mkdir(parents=True)
 
-    # Copy lightweight verified source JSONs
+    # Copy lightweight tracked verified source JSONs
     for src_rel in [
         "experiments/baselines/model_comparison.json",
         "experiments/final_evaluation/test_metrics.json",
-        "data/processed/preprocessing_metadata.json",
-        "data/raw/ingestion_metadata.json",
     ]:
         orig = Path(src_rel)
         if orig.exists():
             (tmp_dir / src_rel).write_bytes(orig.read_bytes())
+
+    # Create hermetic synthetic metadata directly inside the temporary test project
+    prep_meta = {
+        "transformed_feature_count": 51,
+        "target_column": "y",
+        "excluded_features": ["duration"],
+    }
+    raw_meta = {
+        "dataset_name": "UCI Bank Marketing",
+        "sha256_checksum": "d1513ec63b385506f7cfce9f2c5caa9fe99e7ba4e8c3fa264b3aaf0f849ed32d",
+    }
+    (tmp_dir / "data/processed/preprocessing_metadata.json").write_text(
+        json.dumps(prep_meta, indent=2), encoding="utf-8"
+    )
+    (tmp_dir / "data/raw/ingestion_metadata.json").write_text(
+        json.dumps(raw_meta, indent=2), encoding="utf-8"
+    )
 
     # Populate lightweight valid model artifacts matching expected parameters
     lr = LogisticRegression(solver="lbfgs", class_weight="balanced", random_state=42)
